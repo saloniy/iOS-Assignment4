@@ -11,10 +11,12 @@ import UIKit
 class RecipeServiceController {
     
     static var shared = RecipeServiceController();
+    let baseApi = "https://www.themealdb.com/api/json/v1/1";
     
     func getMealCategories(handler: @escaping (categoryResult)->Void) {
-        let urlString = "https://www.themealdb.com/api/json/v1/1/categories.php";
-        let urlObj = URL(string: urlString)!;
+        let urlString = baseApi + "/categories.php";
+        let urlWithEncoding = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        let urlObj = URL(string: urlWithEncoding!)!;
         let task = URLSession.shared.dataTask(with: urlObj) { data, apiResponse, err in
             if let error = err {
                 print(error);
@@ -33,8 +35,9 @@ class RecipeServiceController {
     }
     
     func getMealRecipes(category: String, handler: @escaping(recipeResult)->Void) {
-        let urlString = "https://www.themealdb.com/api/json/v1/1/filter.php?c=" + category;
-        let urlObj = URL(string: urlString)!;
+        let urlString = baseApi + "/filter.php?c=" + category;
+        let urlWithEncoding = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        let urlObj = URL(string: urlWithEncoding!)!;
         let task = URLSession.shared.dataTask(with: urlObj) { data, apiResponse, err in
             if let error = err {
                 print(error);
@@ -46,6 +49,27 @@ class RecipeServiceController {
             if let recipeData = data {
                 let decoder = JSONDecoder();
                 let result = try? decoder.decode(recipeResult.self, from: recipeData)
+                handler(result!);
+            }
+        }
+        task.resume();
+    }
+    
+    func getMealRecipeDetails(recipe: String, handler: @escaping(recipeDetailResult)->Void) {
+        let urlString = baseApi + "/search.php?s=" + recipe;
+        let urlWithEncoding = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        let urlObj = URL(string: urlWithEncoding!)!;
+        let task = URLSession.shared.dataTask(with: urlObj) {data, apiResponse, err in
+            if let error = err {
+                print(error);
+            }
+            guard let httpResponse = apiResponse as? HTTPURLResponse, (200...299).contains(httpResponse.statusCode) else {
+                print("Some Error Occurred....");
+                return;
+            }
+            if let recipeDetailData = data {
+                let decoder = JSONDecoder();
+                let result = try? decoder.decode(recipeDetailResult.self, from: recipeDetailData)
                 handler(result!);
             }
         }

@@ -1,13 +1,13 @@
 //
-//  RecipeViewController.swift
+//  FavoritesViewController.swift
 //  yummy-recipes
 //
-//  Created by user202495 on 11/21/21.
+//  Created by user202495 on 12/3/21.
 //
 
 import UIKit
 
-class RecipeViewController: UIViewController {
+class FavoritesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

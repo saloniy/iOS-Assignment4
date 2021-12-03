@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		91058017275AC03A0006AB4A /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91058016275AC03A0006AB4A /* FavoritesTableViewController.swift */; };
+		9105801F275AC15C0006AB4A /* FavoritesServiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9105801E275AC15C0006AB4A /* FavoritesServiceController.swift */; };
 		9133F8B527585BAF00D24E9B /* DataWithImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9133F8B427585BAF00D24E9B /* DataWithImage.swift */; };
 		9168D9882754365000812583 /* RecipeServiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9168D9872754365000812583 /* RecipeServiceController.swift */; };
 		91FF09EE274B186A008EF9B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FF09ED274B186A008EF9B2 /* AppDelegate.swift */; };
@@ -44,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		91058016275AC03A0006AB4A /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
+		9105801E275AC15C0006AB4A /* FavoritesServiceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesServiceController.swift; sourceTree = "<group>"; };
 		9133F8B427585BAF00D24E9B /* DataWithImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataWithImage.swift; sourceTree = "<group>"; };
 		9168D9872754365000812583 /* RecipeServiceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeServiceController.swift; sourceTree = "<group>"; };
 		91FF09EA274B186A008EF9B2 /* yummy-recipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "yummy-recipes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,6 +98,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		915CB33C27598B03009DA6FB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				91058016275AC03A0006AB4A /* FavoritesTableViewController.swift */,
+				91FF0A23274B1B5E008EF9B2 /* RecipeViewController.swift */,
+				91FF0A28274B1B9E008EF9B2 /* RecipeTableViewController.swift */,
+				91FF09F1274B186A008EF9B2 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		91FF09E1274B186A008EF9B2 = {
 			isa = PBXGroup;
 			children = (
@@ -117,14 +132,12 @@
 		91FF09EC274B186A008EF9B2 /* yummy-recipes */ = {
 			isa = PBXGroup;
 			children = (
+				915CB33C27598B03009DA6FB /* Controller */,
 				91FF0A2E274B1FD5008EF9B2 /* View */,
 				91FF0A2D274B1FCC008EF9B2 /* Model */,
 				91FF09ED274B186A008EF9B2 /* AppDelegate.swift */,
 				91FF09EF274B186A008EF9B2 /* SceneDelegate.swift */,
-				91FF09F1274B186A008EF9B2 /* ViewController.swift */,
 				91FF09F3274B186A008EF9B2 /* Main.storyboard */,
-				91FF0A28274B1B9E008EF9B2 /* RecipeTableViewController.swift */,
-				91FF0A23274B1B5E008EF9B2 /* RecipeViewController.swift */,
 				91FF09F9274B186C008EF9B2 /* Assets.xcassets */,
 				91FF09FB274B186C008EF9B2 /* LaunchScreen.storyboard */,
 				91FF09FE274B186C008EF9B2 /* Info.plist */,
@@ -159,6 +172,7 @@
 				91FF0A39274B205C008EF9B2 /* Recipe.swift */,
 				91FF0A3E274B206A008EF9B2 /* RecipeDetail.swift */,
 				9133F8B427585BAF00D24E9B /* DataWithImage.swift */,
+				9105801E275AC15C0006AB4A /* FavoritesServiceController.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -302,6 +316,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9168D9882754365000812583 /* RecipeServiceController.swift in Sources */,
+				91058017275AC03A0006AB4A /* FavoritesTableViewController.swift in Sources */,
+				9105801F275AC15C0006AB4A /* FavoritesServiceController.swift in Sources */,
 				91FF09F2274B186A008EF9B2 /* ViewController.swift in Sources */,
 				91FF09F8274B186A008EF9B2 /* yummy_recipes.xcdatamodeld in Sources */,
 				91FF0A3F274B206A008EF9B2 /* RecipeDetail.swift in Sources */,
