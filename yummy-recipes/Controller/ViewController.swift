@@ -58,9 +58,11 @@ class ViewController: UIViewController,
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destination = segue.destination as? RecipeTableViewController;
-        let index = myTable.indexPathForSelectedRow;
-        destination!.recipeCategory = tableData[index!.row].name;
+        if(segue.identifier == "recipesSegue") {
+            let destination = segue.destination as? RecipeTableViewController;
+            let index = myTable.indexPathForSelectedRow;
+            destination!.recipeCategory = tableData[index!.row].name;
+        }
     }
 
 

@@ -94,4 +94,149 @@ class RecipeServiceController {
         task.resume();
     }
     
+    func createRecipeIngredients(recipeDetail: RecipeDetailData) -> String {
+        var ingredientsText: String = "";
+        if var ing = recipeDetail.strIngredient1 {
+            ing = ing.trimmingCharacters(in: .whitespacesAndNewlines);
+            if var m = recipeDetail.strMeasure1 {
+                m = m.trimmingCharacters(in: .whitespacesAndNewlines)
+                ingredientsText.append(ing == "" ? "" : (ing + (m == "" ? "\n" : ": " + m + "\n")))
+            }
+        }
+        if var ing = recipeDetail.strIngredient2 {
+            ing = ing.trimmingCharacters(in: .whitespacesAndNewlines);
+            if var m = recipeDetail.strMeasure2 {
+                m = m.trimmingCharacters(in: .whitespacesAndNewlines)
+                ingredientsText.append(ing == "" ? "" : (ing + (m == "" ? "\n" : ": " + m + "\n")))
+            }
+        }
+        if var ing = recipeDetail.strIngredient3 {
+            ing = ing.trimmingCharacters(in: .whitespacesAndNewlines);
+            if var m = recipeDetail.strMeasure3 {
+                m = m.trimmingCharacters(in: .whitespacesAndNewlines)
+                ingredientsText.append(ing == "" ? "" : (ing + (m == "" ? "\n" : ": " + m + "\n")))
+            }
+        }
+        if var ing = recipeDetail.strIngredient4 {
+            ing = ing.trimmingCharacters(in: .whitespacesAndNewlines);
+            if var m = recipeDetail.strMeasure4 {
+                m = m.trimmingCharacters(in: .whitespacesAndNewlines)
+                ingredientsText.append(ing == "" ? "" : (ing + (m == "" ? "\n" : ": " + m + "\n")))
+            }
+        }
+        if var ing = recipeDetail.strIngredient5 {
+            ing = ing.trimmingCharacters(in: .whitespacesAndNewlines);
+            if var m = recipeDetail.strMeasure5 {
+                m = m.trimmingCharacters(in: .whitespacesAndNewlines)
+                ingredientsText.append(ing == "" ? "" : (ing + (m == "" ? "\n" : ": " + m + "\n")))
+            }
+        }
+        if var ing = recipeDetail.strIngredient6 {
+            ing = ing.trimmingCharacters(in: .whitespacesAndNewlines);
+            if var m = recipeDetail.strMeasure6 {
+                m = m.trimmingCharacters(in: .whitespacesAndNewlines)
+                ingredientsText.append(ing == "" ? "" : (ing + (m == "" ? "\n" : ": " + m + "\n")))
+            }
+        }
+        if var ing = recipeDetail.strIngredient7 {
+            ing = ing.trimmingCharacters(in: .whitespacesAndNewlines);
+            if var m = recipeDetail.strMeasure7 {
+                m = m.trimmingCharacters(in: .whitespacesAndNewlines)
+                ingredientsText.append(ing == "" ? "" : (ing + (m == "" ? "\n" : ": " + m + "\n")))
+            }
+        }
+        if var ing = recipeDetail.strIngredient8 {
+            ing = ing.trimmingCharacters(in: .whitespacesAndNewlines);
+            if var m = recipeDetail.strMeasure8 {
+                m = m.trimmingCharacters(in: .whitespacesAndNewlines)
+                ingredientsText.append(ing == "" ? "" : (ing + (m == "" ? "\n" : ": " + m + "\n")))
+            }
+        }
+        if var ing = recipeDetail.strIngredient9 {
+            ing = ing.trimmingCharacters(in: .whitespacesAndNewlines);
+            if var m = recipeDetail.strMeasure9 {
+                m = m.trimmingCharacters(in: .whitespacesAndNewlines)
+                ingredientsText.append(ing == "" ? "" : (ing + (m == "" ? "\n" : ": " + m + "\n")))
+            }
+        }
+        if var ing = recipeDetail.strIngredient10 {
+            ing = ing.trimmingCharacters(in: .whitespacesAndNewlines);
+            if var m = recipeDetail.strMeasure10 {
+                m = m.trimmingCharacters(in: .whitespacesAndNewlines)
+                ingredientsText.append(ing == "" ? "" : (ing + (m == "" ? "\n" : ": " + m + "\n")))
+            }
+        }
+        if var ing = recipeDetail.strIngredient11 {
+            ing = ing.trimmingCharacters(in: .whitespacesAndNewlines);
+            if var m = recipeDetail.strMeasure11 {
+                m = m.trimmingCharacters(in: .whitespacesAndNewlines)
+                ingredientsText.append(ing == "" ? "" : (ing + (m == "" ? "\n" : ": " + m + "\n")))
+            }
+        }
+        if var ing = recipeDetail.strIngredient12 {
+            ing = ing.trimmingCharacters(in: .whitespacesAndNewlines);
+            if var m = recipeDetail.strMeasure12 {
+                m = m.trimmingCharacters(in: .whitespacesAndNewlines)
+                ingredientsText.append(ing == "" ? "" : (ing + (m == "" ? "\n" : ": " + m + "\n")))
+            }
+        }
+        if var ing = recipeDetail.strIngredient13 {
+            ing = ing.trimmingCharacters(in: .whitespacesAndNewlines);
+            if var m = recipeDetail.strMeasure13 {
+                m = m.trimmingCharacters(in: .whitespacesAndNewlines)
+                ingredientsText.append(ing == "" ? "" : (ing + (m == "" ? "\n" : ": " + m + "\n")))
+            }
+        }
+        if var ing = recipeDetail.strIngredient14 {
+            ing = ing.trimmingCharacters(in: .whitespacesAndNewlines);
+            if var m = recipeDetail.strMeasure14 {
+                m = m.trimmingCharacters(in: .whitespacesAndNewlines)
+                ingredientsText.append(ing == "" ? "" : (ing + (m == "" ? "\n" : ": " + m + "\n")))
+            }
+        }
+        if var ing = recipeDetail.strIngredient15 {
+            ing = ing.trimmingCharacters(in: .whitespacesAndNewlines);
+            if var m = recipeDetail.strMeasure15 {
+                m = m.trimmingCharacters(in: .whitespacesAndNewlines)
+                ingredientsText.append(ing == "" ? "" : (ing + (m == "" ? "\n" : ": " + m + "\n")))
+            }
+        }
+        if var ing = recipeDetail.strIngredient16 {
+            ing = ing.trimmingCharacters(in: .whitespacesAndNewlines);
+            if var m = recipeDetail.strMeasure16 {
+                m = m.trimmingCharacters(in: .whitespacesAndNewlines)
+                ingredientsText.append(ing == "" ? "" : (ing + (m == "" ? "\n" : ": " + m + "\n")))
+            }
+        }
+        if var ing = recipeDetail.strIngredient17 {
+            ing = ing.trimmingCharacters(in: .whitespacesAndNewlines);
+            if var m = recipeDetail.strMeasure17 {
+                m = m.trimmingCharacters(in: .whitespacesAndNewlines)
+                ingredientsText.append(ing == "" ? "" : (ing + (m == "" ? "\n" : ": " + m + "\n")))
+            }
+        }
+        if var ing = recipeDetail.strIngredient18 {
+            ing = ing.trimmingCharacters(in: .whitespacesAndNewlines);
+            if var m = recipeDetail.strMeasure18 {
+                m = m.trimmingCharacters(in: .whitespacesAndNewlines)
+                ingredientsText.append(ing == "" ? "" : (ing + (m == "" ? "\n" : ": " + m + "\n")))
+            }
+        }
+        if var ing = recipeDetail.strIngredient19 {
+            ing = ing.trimmingCharacters(in: .whitespacesAndNewlines);
+            if var m = recipeDetail.strMeasure19 {
+                m = m.trimmingCharacters(in: .whitespacesAndNewlines)
+                ingredientsText.append(ing == "" ? "" : (ing + (m == "" ? "\n" : ": " + m + "\n")))
+            }
+        }
+        if var ing = recipeDetail.strIngredient20 {
+            ing = ing.trimmingCharacters(in: .whitespacesAndNewlines);
+            if var m = recipeDetail.strMeasure20 {
+                m = m.trimmingCharacters(in: .whitespacesAndNewlines)
+                ingredientsText.append(ing == "" ? "" : (ing + (m == "" ? "\n" : ": " + m + "\n")))
+            }
+        }
+        return ingredientsText;
+    }
+    
 }
