@@ -30,6 +30,10 @@ class RecipeViewController: UIViewController {
                                 self.recipeImage.image = image;
                                 self.recipeHeading.text = self.recipeDetails[0].strMeal;
                                 self.createRecipeInstructions();
+                                if(FavoritesServiceController.shared.favoriteExsists(id: self.recipeId)) {
+                                    self.favoritesBtn.setImage(UIImage(systemName: "star.fill"), for: .normal)
+                                    self.recipeData = FavoritesServiceController.shared.getFavoriteById(id: self.recipeId);
+                                }
                             }
                         case .failure(let error):
                             print(error);
@@ -64,8 +68,8 @@ class RecipeViewController: UIViewController {
             FavoritesServiceController.shared.deleteFavorite(toDelete: recipeData!);
         } else {
             favoritesButton.setImage(UIImage(systemName: "star.fill"), for: .normal)
-            recipeData = FavoritesServiceController.shared.addFavorite(id: savedId!, name: recipeHeading.text!, instructions: recipeInstructions.text, image: (recipeImage.image?.pngData())!)
-
+            FavoritesServiceController.shared.addFavorite(id: savedId!, name: recipeHeading.text!, instructions: recipeInstructions.text, image: (recipeImage.image?.pngData())!)
+            recipeData = FavoritesServiceController.shared.getFavoriteById(id: savedId!);
             
             }
         }

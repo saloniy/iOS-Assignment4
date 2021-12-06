@@ -12,14 +12,17 @@ class FavoritesServiceController {
     
     static var shared = FavoritesServiceController();
     
-    func addFavorite(id: String, name: String, instructions: String, image: Data) -> FavoriteRecipes {
+    func addFavorite(id: String, name: String, instructions: String, image: Data) {
         let newFavRecipe = FavoriteRecipes(context: persistentContainer.viewContext)
-        var result: [FavoriteRecipes] = [];
         newFavRecipe.id = id;
         newFavRecipe.name = name;
         newFavRecipe.instructions = instructions;
         newFavRecipe.image = image;
         saveContext();
+    }
+    
+    func getFavoriteById(id: String) -> FavoriteRecipes {
+        var result: [FavoriteRecipes] = [];
         let fetchRequest: NSFetchRequest<FavoriteRecipes> = FavoriteRecipes.fetchRequest()
         let predicate = NSPredicate(format: "id == %@", id as CVarArg);
         fetchRequest.predicate = predicate
